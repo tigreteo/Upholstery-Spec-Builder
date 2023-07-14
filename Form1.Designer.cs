@@ -134,7 +134,7 @@
             // 
             // folderBrowserDialog1
             // 
-            this.folderBrowserDialog1.SelectedPath = "Y:\\Product Development\\Style Specifications";
+            this.folderBrowserDialog1.SelectedPath = "DRIVE LOCATION:\\Product Development\\Style Specifications";
             // 
             // label3
             // 
