@@ -25,7 +25,8 @@ namespace Upholstery_Builder
             xlApp.Visible = true;
 
             //update to open file as read only
-            Workbook wb = xlApp.Workbooks.Open(@"Y:\Product Development\Forms\Auto Upholstery Spec.xls", false, true);
+            //move file location from hard code to registry
+            Workbook wb = xlApp.Workbooks.Open(@"DRIVE LOCATION:\Product Development\Forms\Auto Upholstery Spec.xls", false, true);
             Worksheet ws = (Worksheet)wb.Worksheets[1];
 
             if (ws == null)
@@ -230,8 +231,8 @@ namespace Upholstery_Builder
 
         static System.Array getDimensions(string styleId, Application xlApp)
         {
-            //***Need to change file to Y drive when finished
-            Workbook wb = xlApp.Workbooks.Open(@"Y:\Customers\Style Info\Styles and Dimensions.XLS", null, true);
+            //***Need to change file location to registry
+            Workbook wb = xlApp.Workbooks.Open(@"DRIVE LOCATION:\Customers\Style Info\Styles and Dimensions.XLS", null, true);
             Worksheet ws = (Worksheet)wb.Worksheets[1];
 
             Range all = ws.UsedRange;
