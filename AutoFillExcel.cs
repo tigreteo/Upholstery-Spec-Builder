@@ -206,8 +206,8 @@ namespace Upholstery_Builder
 
         static System.Array getDimensions(string styleId, Application xlApp)
         {
-            //***Need to change file to Y drive when finished
-            Workbook wb = xlApp.Workbooks.Open(@"Y:\Customers\Style Info\Styles and Dimensions.XLS", null, true);
+            //***Need change file location from Code to registry
+            Workbook wb = xlApp.Workbooks.Open(@"DRIVELOCATION:\Customers\Style Info\Styles and Dimensions.XLS", null, true);
             Worksheet ws = (Worksheet)wb.Worksheets[1];
 
             Range all = ws.UsedRange;
